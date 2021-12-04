@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -58,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="-1681" y="560"/>
         </scene>
-        <!--Media Collection View Controller-->
+        <!--Black Media-->
         <scene sceneID="Uhf-7c-OtZ">
             <objects>
-                <collectionViewController id="eoq-Ke-m2S" customClass="MediaCollectionViewController" customModule="BLM_Resources" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="eoq-Ke-m2S" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aJq-lK-zlw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,31 +71,22 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jd2-UA-dNF">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ola-vs-ZCs">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="eoq-Ke-m2S" id="n2c-KT-jwu"/>
                             <outlet property="delegate" destination="eoq-Ke-m2S" id="0wK-6O-dRG"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="5S7-Jt-RO0"/>
+                    <navigationItem key="navigationItem" title="Black Media" id="5S7-Jt-RO0"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uig-E5-2zK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1487" y="-123"/>
         </scene>
-        <!--Donate Collection View Controller-->
+        <!--Donate-->
         <scene sceneID="xJi-4A-8l1">
             <objects>
-                <collectionViewController id="p8w-ML-1f4" customClass="DonateCollectionViewController" customModule="BLM_Resources" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="p8w-ML-1f4" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Byx-Qk-esu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,31 +97,22 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Aru-ZM-Qnq">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kjr-tu-PfX">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="p8w-ML-1f4" id="jyF-Sg-7bu"/>
                             <outlet property="delegate" destination="p8w-ML-1f4" id="uZ7-gl-YgK"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="M46-kV-1Hi"/>
+                    <navigationItem key="navigationItem" title="Donate" id="M46-kV-1Hi"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vi-7I-aOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1487" y="560"/>
         </scene>
-        <!--Petition Collection View Controller-->
+        <!--Sign Petitions-->
         <scene sceneID="3eK-Wk-SrG">
             <objects>
-                <collectionViewController id="bPb-T3-Ns8" customClass="PetitionCollectionViewController" customModule="BLM_Resources" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="bPb-T3-Ns8" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rTv-ME-1XN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,31 +123,22 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hbV-o5-tUr">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NhK-wf-PMy">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="bPb-T3-Ns8" id="Cxq-8H-Nuj"/>
                             <outlet property="delegate" destination="bPb-T3-Ns8" id="E4m-rU-GMx"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="vk6-1g-G4h"/>
+                    <navigationItem key="navigationItem" title="Sign Petitions" id="vk6-1g-G4h"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEy-lw-zA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1487" y="1235"/>
         </scene>
-        <!--Contact Collection View Controller-->
+        <!--Contact Officials-->
         <scene sceneID="6vT-XP-iLi">
             <objects>
-                <collectionViewController id="aOZ-C7-rsS" customClass="ContactCollectionViewController" customModule="BLM_Resources" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="aOZ-C7-rsS" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="D2F-1Q-yzt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,22 +149,13 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="q9u-lV-b8d">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="a7t-EC-vKR">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="aOZ-C7-rsS" id="kDZ-7D-7qx"/>
                             <outlet property="delegate" destination="aOZ-C7-rsS" id="2yB-9Y-iab"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="iDu-1W-IVl"/>
+                    <navigationItem key="navigationItem" title="Contact Officials" id="iDu-1W-IVl"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cel-nB-GaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,17 +164,23 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yfj-ST-o38">
             <objects>
-                <tabBarController storyboardIdentifier="tabs" id="HEn-hW-TG8" customClass="TabBarController" customModule="BLM_Resources" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabs" id="HEn-hW-TG8" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="f7D-ae-C2e"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TgT-Xs-LcD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.61960786580000005" green="0.46274507050000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.61960786580000005" green="0.46274507050000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="MyJ-ZX-zcA" kind="relationship" relationship="viewControllers" id="Sro-QH-7nN"/>
-                        <segue destination="T0Z-Lb-btf" kind="relationship" relationship="viewControllers" id="ezT-KY-h5z"/>
                         <segue destination="rDD-uw-1zb" kind="relationship" relationship="viewControllers" id="Uzb-mT-xd8"/>
+                        <segue destination="T0Z-Lb-btf" kind="relationship" relationship="viewControllers" id="ezT-KY-h5z"/>
+                        <segue destination="MyJ-ZX-zcA" kind="relationship" relationship="viewControllers" id="Sro-QH-7nN"/>
                         <segue destination="VJ2-y6-L3B" kind="relationship" relationship="viewControllers" id="1xx-oB-C9A"/>
                         <segue destination="8oN-5H-kRO" kind="relationship" relationship="viewControllers" id="xtt-rf-gzd"/>
                     </connections>
@@ -224,10 +193,10 @@
         <scene sceneID="BZb-It-5UR">
             <objects>
                 <navigationController title="Donate Navigation" automaticallyAdjustsScrollViewInsets="NO" id="MyJ-ZX-zcA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Donate" id="jRP-ou-itT"/>
+                    <tabBarItem key="tabBarItem" title="Donate" image="dollarsign.circle" catalog="system" selectedImage="dollarsign.circle.fill" id="jRP-ou-itT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TDI-R1-j6N">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TDI-R1-j6N">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -239,49 +208,14 @@
             </objects>
             <point key="canvasLocation" x="670" y="560"/>
         </scene>
-        <!--History Collection View Controller-->
-        <scene sceneID="yoW-jU-fBL">
-            <objects>
-                <collectionViewController id="P0u-hp-oqX" customClass="HistoryCollectionViewController" customModule="BLM_Resources" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="d4v-UB-7QN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BzC-mz-mHo">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3aR-En-PKH">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8sW-28-2iv">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="P0u-hp-oqX" id="eMO-l0-LFT"/>
-                            <outlet property="delegate" destination="P0u-hp-oqX" id="OGf-Iw-0lH"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="9QX-Pt-aFH"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PsH-SX-lF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1487" y="-790"/>
-        </scene>
         <!--Media Navigation-->
         <scene sceneID="vWc-SI-l8n">
             <objects>
                 <navigationController title="Media Navigation" automaticallyAdjustsScrollViewInsets="NO" id="T0Z-Lb-btf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Media" id="aMQ-3i-3m5"/>
+                    <tabBarItem key="tabBarItem" title="Media" image="music.note.tv" catalog="system" selectedImage="music.note.tv.fill" id="aMQ-3i-3m5"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fGJ-3D-7kz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fGJ-3D-7kz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -293,33 +227,71 @@
             </objects>
             <point key="canvasLocation" x="670" y="-123"/>
         </scene>
-        <!--History Navigation-->
+        <!--History-->
         <scene sceneID="5FV-PO-PPR">
             <objects>
-                <navigationController storyboardIdentifier="history" title="History Navigation" automaticallyAdjustsScrollViewInsets="NO" id="rDD-uw-1zb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="History" id="R3y-dP-mMN"/>
+                <navigationController storyboardIdentifier="history" title="History" automaticallyAdjustsScrollViewInsets="NO" id="rDD-uw-1zb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="clock" catalog="system" selectedImage="clock.fill" id="R3y-dP-mMN"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hZZ-0e-IAL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hZZ-0e-IAL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="P0u-hp-oqX" kind="relationship" relationship="rootViewController" id="kne-fi-FWy"/>
+                        <segue destination="1rY-q3-jVQ" kind="relationship" relationship="rootViewController" id="bmb-xr-QU7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ObI-64-K4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="670" y="-790"/>
         </scene>
+        <!--Learn Black History-->
+        <scene sceneID="oOm-at-4gm">
+            <objects>
+                <viewController id="1rY-q3-jVQ" customClass="ViewController" customModule="BLM_Resources" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tfQ-5l-i5U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iS3-ij-DG9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hmd-6K-8Ab">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="05Z-eT-7IO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iS3-ij-DG9" firstAttribute="leading" secondItem="05Z-eT-7IO" secondAttribute="leading" id="L9X-aw-til"/>
+                            <constraint firstAttribute="bottom" secondItem="iS3-ij-DG9" secondAttribute="bottom" id="Yjw-Uj-6d5"/>
+                            <constraint firstItem="iS3-ij-DG9" firstAttribute="top" secondItem="tfQ-5l-i5U" secondAttribute="top" id="jwy-Q7-Ocm"/>
+                            <constraint firstItem="05Z-eT-7IO" firstAttribute="trailing" secondItem="iS3-ij-DG9" secondAttribute="trailing" id="kQ8-iG-dPb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Learn Black History" largeTitleDisplayMode="always" id="Ty0-xn-bQI"/>
+                    <connections>
+                        <outlet property="collectionView" destination="iS3-ij-DG9" id="mmr-Ct-tsI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwc-nf-PHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1487" y="-790"/>
+        </scene>
         <!--Petition Navigation-->
         <scene sceneID="xaM-nn-51N">
             <objects>
                 <navigationController title="Petition Navigation" automaticallyAdjustsScrollViewInsets="NO" id="VJ2-y6-L3B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Petitions" id="8yM-iM-33b"/>
+                    <tabBarItem key="tabBarItem" title="Petitions" image="pencil.circle" catalog="system" selectedImage="pencil.circle.fill" id="8yM-iM-33b"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iTc-uj-LnJ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="iTc-uj-LnJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -335,10 +307,10 @@
         <scene sceneID="Mqf-4E-Duc">
             <objects>
                 <navigationController title="Contact Navigation" automaticallyAdjustsScrollViewInsets="NO" id="8oN-5H-kRO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contact" id="Yrj-Yw-qhc"/>
+                    <tabBarItem key="tabBarItem" title="Contact" image="phone" catalog="system" selectedImage="phone.fill" id="Yrj-Yw-qhc"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fDD-Ih-B3S">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fDD-Ih-B3S">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -352,6 +324,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="music.note.tv" catalog="system" width="128" height="97"/>
+        <image name="music.note.tv.fill" catalog="system" width="128" height="97"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

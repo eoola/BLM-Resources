@@ -1,5 +1,5 @@
 //
-//  InitialViewController.swift
+//  ViewController.swift
 //  BLM Resources
 //
 //  Created by Emmanuel Ola on 12/4/21.
@@ -7,28 +7,21 @@
 
 import UIKit
 
-class InitialViewController: UIViewController {
-
+class ViewController: UIViewController {
+    
+    enum Section: Hashable {
+        case major
+    }
+    
+    @IBOutlet var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func openHistory(_ sender: Any) {
-        guard
-            let homeViewController = storyboard?.instantiateViewController(withIdentifier: "tabs") as? UITabBarController
-        else {
-            print("bob")
-            return
-        }
-        
-        self.view.window?.rootViewController = homeViewController
-        self.view.window?.backgroundColor = UIColor.white
-        self.view.window?.makeKeyAndVisible()
-        
-    }
-    
+
     /*
     // MARK: - Navigation
 

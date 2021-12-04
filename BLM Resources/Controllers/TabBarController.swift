@@ -7,6 +7,9 @@
 
 import UIKit
 
+/**
+ Class to enable programmatically instantiating the tab bar controller
+ */
 class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -17,10 +20,72 @@ class TabBarController: UITabBarController {
     
     lazy var historyTabBar: HistoryCollectionViewController = {
         let historyTabBar = HistoryCollectionViewController()
+        
         let title = "History"
-        let defaultImage = UIImage(named: "")
-    }
+        let defaultImage = UIImage(named: "clock")
+        let selectedImage = UIImage(named: "clock.fill")
+        let tabBarItems = (title: title, image: defaultImage, selectedImage: selectedImage)
+        let tabBarItem = UITabBarItem(title: tabBarItems.title, image: tabBarItems.image, selectedImage: tabBarItems.selectedImage)
+        historyTabBar.tabBarItem = tabBarItem
+        
+        return historyTabBar
+    }()
     
+    lazy var mediaTabBar: MediaCollectionViewController = {
+        let mediaTabBar = MediaCollectionViewController()
+        
+        let title = "Media"
+        let defaultImage = UIImage(named: "music.note.tv")
+        let selectedImage = UIImage(named: "music.note.tv.fill")
+        let tabBarItems = (title: title, image: defaultImage, selectedImage: selectedImage)
+        let tabBarItem = UITabBarItem(title: tabBarItems.title, image: tabBarItems.image, selectedImage: tabBarItems.selectedImage)
+        historyTabBar.tabBarItem = tabBarItem
+        
+        return mediaTabBar
+    }()
+    
+    lazy var donateTabBar: DonateCollectionViewController = {
+        let donateTabBar = DonateCollectionViewController()
+        
+        let title = "Donate"
+        let defaultImage = UIImage(named: "dollarsign.square")
+        let selectedImage = UIImage(named: "dollarsign.square.fill")
+        let tabBarItems = (title: title, image: defaultImage, selectedImage: selectedImage)
+        let tabBarItem = UITabBarItem(title: tabBarItems.title, image: tabBarItems.image, selectedImage: tabBarItems.selectedImage)
+        donateTabBar.tabBarItem = tabBarItem
+        
+        return donateTabBar
+    }()
+    
+    lazy var petitionTabBar: PetitionCollectionViewController = {
+        let petitionTabBar = PetitionCollectionViewController()
+        
+        let title = "Petition"
+        let defaultImage = UIImage(named: "pencil.circle")
+        let selectedImage = UIImage(named: "pencil.circle.fill")
+        let tabBarItems = (title: title, image: defaultImage, selectedImage: selectedImage)
+        let tabBarItem = UITabBarItem(title: tabBarItems.title, image: tabBarItems.image, selectedImage: tabBarItems.selectedImage)
+        petitionTabBar.tabBarItem = tabBarItem
+        
+        return petitionTabBar
+    }()
+    
+    lazy var contactTabBar: ContactCollectionViewController = {
+        let contactTabBar = ContactCollectionViewController()
+        
+        let title = "Contact"
+        let defaultImage = UIImage(named: "phone")
+        let selectedImage = UIImage(named: "phone.fill")
+        let tabBarItems = (title: title, image: defaultImage, selectedImage: selectedImage)
+        let tabBarItem = UITabBarItem(title: tabBarItems.title, image: tabBarItems.image, selectedImage: tabBarItems.selectedImage)
+        contactTabBar.tabBarItem = tabBarItem
+        
+        return contactTabBar
+    }()
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 
     /*
     // MARK: - Navigation
@@ -32,4 +97,10 @@ class TabBarController: UITabBarController {
     }
     */
 
+}
+
+extension TabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("Selected \(viewController.title!)")
+    }
 }
