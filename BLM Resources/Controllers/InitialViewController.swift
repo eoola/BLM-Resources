@@ -15,7 +15,18 @@ class InitialViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func openHistory(_ sender: Any) {
+        guard
+            let tabBarController = storyboard?.instantiateViewController(withIdentifier: "tabs") as? UITabBarController, let historyViewController = (tabBarController.viewControllers?[0] as? UINavigationController)?.topViewController as? HistoryCollectionViewController
+        else {
+            print("bob")
+            return
+        }
+        
+        present(historyViewController, animated: true)
+        
+    }
+    
     /*
     // MARK: - Navigation
 
