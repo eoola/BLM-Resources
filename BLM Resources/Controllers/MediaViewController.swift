@@ -1,27 +1,33 @@
 //
-//  ViewController.swift
+//  MediaViewController.swift
 //  BLM Resources
 //
-//  Created by Emmanuel Ola on 12/4/21.
+//  Created by Emmanuel Ola on 12/5/21.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class MediaViewController: UIViewController {
     
-    enum Section: Hashable {
-        case major
+    enum Section {
+        case media
+        case categories
     }
     
-    @IBOutlet var collectionView: UICollectionView!
-    
+    enum SupplementaryViewKind {
+        static let header = "header"
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBOutlet var collectionView: UICollectionView!
+    
+    var dataSource: UICollectionViewDiffableDataSource<Section, MediaItem>!
+    
     /*
     // MARK: - Navigation
 

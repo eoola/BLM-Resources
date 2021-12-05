@@ -23,7 +23,7 @@ class MajorHistoryCollectionViewCell: UICollectionViewCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
-        label.textColor = UIColor.label
+        label.textColor = UIColor(named: "Learn Text")
         label.setContentHuggingPriority(.required, for: .vertical)
         
         return label
@@ -32,6 +32,10 @@ class MajorHistoryCollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 5.0
+        imageView.clipsToBounds = true
+        
+        imageView.contentMode = .scaleAspectFill
+        
         return imageView
     }()
     
