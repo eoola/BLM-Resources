@@ -28,10 +28,10 @@ enum MediaItem: Hashable {
         }
     }
     
-    static let books: [Media] = [
-        Media(genre: "Horror", image: UIImage(systemName: "circle") ?? UIImage()),
-        Media(genre: "Sad", image: UIImage(systemName: "circle") ?? UIImage()),
-        Media(genre: "Great", image: UIImage(systemName: "circle") ?? UIImage())
+    static let books: [MediaItem] = [
+        .media(Media(genre: "Horror", image: UIImage(systemName: "circle") ?? UIImage())),
+        .media(Media(genre: "Sad", image: UIImage(systemName: "circle") ?? UIImage())),
+        .media(Media(genre: "Great", image: UIImage(systemName: "circle") ?? UIImage()))
     ]
     
     static let movies: [Media] = [

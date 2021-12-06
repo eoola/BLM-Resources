@@ -21,6 +21,9 @@
 		7BD86401275D68E600237869 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD86400275D68E600237869 /* MediaViewController.swift */; };
 		7BD86403275D69B100237869 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD86402275D69B100237869 /* MediaItem.swift */; };
 		7BD86405275D6A3500237869 /* MediaCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD86404275D6A3500237869 /* MediaCategory.swift */; };
+		7BD86407275D79AA00237869 /* DonateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD86406275D79AA00237869 /* DonateCollectionViewCell.swift */; };
+		7BD86409275D7FE500237869 /* DonateCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD86408275D7FE500237869 /* DonateCollectionViewController.swift */; };
+		7BD8640B275D802800237869 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD8640A275D802800237869 /* Donation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		7BD86400275D68E600237869 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		7BD86402275D69B100237869 /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
 		7BD86404275D6A3500237869 /* MediaCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCategory.swift; sourceTree = "<group>"; };
+		7BD86406275D79AA00237869 /* DonateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateCollectionViewCell.swift; sourceTree = "<group>"; };
+		7BD86408275D7FE500237869 /* DonateCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateCollectionViewController.swift; sourceTree = "<group>"; };
+		7BD8640A275D802800237869 /* Donation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 				7BC5E19C275C15A100D650B9 /* HistoryViewController.swift */,
 				7BC5E184275B2DD500D650B9 /* InitialViewController.swift */,
 				7BD86400275D68E600237869 /* MediaViewController.swift */,
+				7BD86408275D7FE500237869 /* DonateCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 				7BD863FE275D66F300237869 /* Media.swift */,
 				7BD86404275D6A3500237869 /* MediaCategory.swift */,
 				7BD86402275D69B100237869 /* MediaItem.swift */,
+				7BD8640A275D802800237869 /* Donation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			children = (
 				7BC5E198275C0CA000D650B9 /* MajorHistoryCollectionViewCell.swift */,
 				7BD863FB275D624F00237869 /* MovieCollectionViewCell.swift */,
+				7BD86406275D79AA00237869 /* DonateCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -197,13 +206,16 @@
 				7BC5E19B275C0F6500D650B9 /* Article.swift in Sources */,
 				7BC5E185275B2DD500D650B9 /* InitialViewController.swift in Sources */,
 				7BD86405275D6A3500237869 /* MediaCategory.swift in Sources */,
+				7BD86407275D79AA00237869 /* DonateCollectionViewCell.swift in Sources */,
 				7BC5E199275C0CA000D650B9 /* MajorHistoryCollectionViewCell.swift in Sources */,
 				7BC5E19D275C15A100D650B9 /* HistoryViewController.swift in Sources */,
 				7BD863FC275D625000237869 /* MovieCollectionViewCell.swift in Sources */,
+				7BD8640B275D802800237869 /* Donation.swift in Sources */,
 				7BD86403275D69B100237869 /* MediaItem.swift in Sources */,
 				7B1FAA0E2759A8C700EAA1B1 /* AppDelegate.swift in Sources */,
 				7BD863FF275D66F300237869 /* Media.swift in Sources */,
 				7BD86401275D68E600237869 /* MediaViewController.swift in Sources */,
+				7BD86409275D7FE500237869 /* DonateCollectionViewController.swift in Sources */,
 				7B1FAA102759A8C700EAA1B1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +373,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,6 +402,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
