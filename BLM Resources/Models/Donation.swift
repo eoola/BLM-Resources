@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Donation {
+struct Donation: Hashable {
     let title: String
     let image: UIImage = UIImage(systemName: "dollarsign.circle")!
     let fraction: String = "$25032 / $50,000"

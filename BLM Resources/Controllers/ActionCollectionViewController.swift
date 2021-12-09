@@ -9,13 +9,14 @@ import UIKit
 
 private let reuseIdentifier = "DonateCell"
 
-class DonateCollectionViewController: UICollectionViewController {
+class ActionCollectionViewController: UICollectionViewController {
     
-    private let items = [
-        Donation(title: "Crawford"),
-        Donation(title: "Bobert"),
-        Donation(title: "Grapes")
-    ]
+    enum ActionType {
+        case donation
+        case petition
+    }
+    
+    var actionType: ActionType = .donation
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +24,22 @@ class DonateCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
-        tabBarController?.tabBar.tintColor = UIColor(named: "Action Tab Bar Tint")
-        tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "Learn")
-        
         navigationItem.title = "Donate"
         collectionView.setCollectionViewLayout(generateLayout(), animated: false)
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if tabBarController?.tabBar.selectedItem?.title == "Petitions" {
+            navigationItem.title = "Petitions"
+            actionType = .petition
+        }
+        
+        tabBarController?.tabBar.tintColor = UIColor(named: "Action Tab Bar Tint")
+        tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "Learn")
     }
     
     private func generateLayout() -> UICollectionViewLayout {
@@ -41,7 +51,7 @@ class DonateCollectionViewController: UICollectionViewController {
         
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: spacing)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(80))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
@@ -78,16 +88,31 @@ class DonateCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return items.count
+        
+        switch actionType {
+        case .donation:
+            return ActionItem.donations.count
+        case .petition:
+            return ActionItem.petitions.count
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DonateCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActionCollectionViewCell
     
         // Configure the cell
-        cell.donationTitle.text = items[indexPath.item].title
-        cell.donationImage.image = items[indexPath.item].image
-        cell.donationFraction.text = items[indexPath.item].fraction
+        
+        switch actionType {
+        case .donation:
+            cell.title.text = ActionItem.donations[indexPath.item].donation?.title
+            cell.image.image = ActionItem.donations[indexPath.item].donation?.image
+            cell.fractionLabel.text = ActionItem.donations[indexPath.item].donation?.fraction
+        case .petition:
+            cell.title.text = ActionItem.petitions[indexPath.item].petition?.title
+            cell.image.image = ActionItem.petitions[indexPath.item].petition?.image
+            cell.fractionLabel.text = ActionItem.petitions[indexPath.item].petition?.fraction
+        }
+        
         
         cell.layer.cornerRadius = 10.0
         cell.layer.borderWidth = 1.0

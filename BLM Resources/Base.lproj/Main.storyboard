@@ -62,7 +62,7 @@
         <!--Donate-->
         <scene sceneID="xJi-4A-8l1">
             <objects>
-                <collectionViewController id="p8w-ML-1f4" customClass="DonateCollectionViewController" customModule="BLM_Resources" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="p8w-ML-1f4" customClass="ActionCollectionViewController" customModule="BLM_Resources" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Byx-Qk-esu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DonateCell" id="taA-EY-Kl0" customClass="DonateCollectionViewCell" customModule="BLM_Resources" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DonateCell" id="taA-EY-Kl0" customClass="ActionCollectionViewCell" customModule="BLM_Resources" customModuleProvider="target">
                                 <rect key="frame" x="47" y="0.0" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hY3-Ek-bAn">
@@ -88,7 +88,6 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <color key="tintColor" name="Learn Text"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="SAo-4c-7Bm"/>
                                                         <constraint firstAttribute="width" constant="80" id="vR4-QF-utd"/>
                                                     </constraints>
                                                 </imageView>
@@ -128,9 +127,9 @@
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" name="Learn"/>
                                 <connections>
-                                    <outlet property="donationFraction" destination="exD-TX-owa" id="i6q-rw-Zad"/>
-                                    <outlet property="donationImage" destination="dtF-Q4-ZDw" id="Dnf-On-hOT"/>
-                                    <outlet property="donationTitle" destination="BHJ-QE-MGt" id="8Ef-bJ-nTq"/>
+                                    <outlet property="fractionLabel" destination="exD-TX-owa" id="i6q-rw-Zad"/>
+                                    <outlet property="image" destination="dtF-Q4-ZDw" id="Dnf-On-hOT"/>
+                                    <outlet property="title" destination="BHJ-QE-MGt" id="8Ef-bJ-nTq"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -145,55 +144,55 @@
             </objects>
             <point key="canvasLocation" x="1487" y="560"/>
         </scene>
-        <!--Sign Petitions-->
-        <scene sceneID="3eK-Wk-SrG">
+        <!--Contact-->
+        <scene sceneID="FGD-6J-r5J">
             <objects>
-                <collectionViewController id="bPb-T3-Ns8" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rTv-ME-1XN">
+                <tableViewController title="Contact" id="DT5-mt-1MO" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="sCt-Du-CEp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4d5-B5-Rji">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" name="Learn Text"/>
+                        <color key="sectionIndexBackgroundColor" name="Learn"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Ts8-MT-5Jj" detailTextLabel="sW3-3O-TIK" imageView="Xo0-eU-YYw" style="IBUITableViewCellStyleSubtitle" id="q8z-vH-kcW">
+                                <rect key="frame" x="0.0" y="32" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q8z-vH-kcW" id="8hi-7S-ayq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ts8-MT-5Jj">
+                                            <rect key="frame" x="55.5" y="6" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sW3-3O-TIK">
+                                            <rect key="frame" x="55.5" y="22.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="phone.fill" catalog="system" id="Xo0-eU-YYw">
+                                            <rect key="frame" x="20.5" y="13" width="19.5" height="17.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="bPb-T3-Ns8" id="Cxq-8H-Nuj"/>
-                            <outlet property="delegate" destination="bPb-T3-Ns8" id="E4m-rU-GMx"/>
+                            <outlet property="dataSource" destination="DT5-mt-1MO" id="fc9-4s-yJP"/>
+                            <outlet property="delegate" destination="DT5-mt-1MO" id="exh-kr-ZUO"/>
                         </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Sign Petitions" id="vk6-1g-G4h"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bEy-lw-zA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1487" y="1235"/>
-        </scene>
-        <!--Contact Officials-->
-        <scene sceneID="6vT-XP-iLi">
-            <objects>
-                <collectionViewController id="aOZ-C7-rsS" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="D2F-1Q-yzt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hhg-th-ohP">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells/>
-                        <connections>
-                            <outlet property="dataSource" destination="aOZ-C7-rsS" id="kDZ-7D-7qx"/>
-                            <outlet property="delegate" destination="aOZ-C7-rsS" id="2yB-9Y-iab"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Contact Officials" id="iDu-1W-IVl"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cel-nB-GaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Contact Local Officials" id="kfX-Iv-Leu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3VG-GW-BUV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1487" y="1902"/>
         </scene>
@@ -239,7 +238,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" name="Learn"/>
+                            <color key="textColor" name="Action Text"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -374,15 +373,18 @@
         <scene sceneID="xaM-nn-51N">
             <objects>
                 <navigationController title="Petition Navigation" automaticallyAdjustsScrollViewInsets="NO" id="VJ2-y6-L3B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Petitions" image="pencil.circle" catalog="system" selectedImage="pencil.circle.fill" id="8yM-iM-33b"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="Petitions" image="pencil.circle" catalog="system" selectedImage="pencil.circle.fill" id="8yM-iM-33b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="iTc-uj-LnJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="Action Text"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bPb-T3-Ns8" kind="relationship" relationship="rootViewController" id="k2R-lU-ooE"/>
+                        <segue destination="p8w-ML-1f4" kind="relationship" relationship="rootViewController" id="N9R-Hg-D1l"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLr-lv-aLq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -398,10 +400,16 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fDD-Ih-B3S">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="Action Text"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="Action Text"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="aOZ-C7-rsS" kind="relationship" relationship="rootViewController" id="51e-LX-bcY"/>
+                        <segue destination="DT5-mt-1MO" kind="relationship" relationship="rootViewController" id="cey-ti-yFF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IY2-53-PvL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -409,6 +417,9 @@
             <point key="canvasLocation" x="670" y="1902"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="N9R-Hg-D1l"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
@@ -421,16 +432,19 @@
         <image name="phone" catalog="system" width="128" height="115"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <namedColor name="Action">
-            <color red="0.90200001001358032" green="0.88999998569488525" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Learn">
             <color red="0.15700000524520874" green="0.15299999713897705" blue="0.17300000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Action Text">
+            <color red="0.9020000696182251" green="0.88999998569488525" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Learn">
+            <color red="0.90200001001358032" green="0.88999998569488525" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="Learn Tab Bar Tint">
-            <color red="0.99900394680000004" green="0.84179741139999997" blue="0.00012430669449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.6470000147819519" green="0.45600000023841858" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Learn Text">
-            <color red="0.90200001001358032" green="0.88999998569488525" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.15700000524520874" green="0.15299999713897705" blue="0.17300000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

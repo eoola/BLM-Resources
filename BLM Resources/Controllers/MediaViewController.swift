@@ -35,6 +35,13 @@ class MediaViewController: UIViewController {
         configureDataSource()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.tintColor = UIColor(named: "Learn Tab Bar Tint")
+        tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "Action")
+    }
+    
     func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
             

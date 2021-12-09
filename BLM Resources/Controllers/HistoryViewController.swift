@@ -27,12 +27,20 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         // MARK: Collection View Setup
         collectionView.collectionViewLayout = createLayout()
         collectionView.register(MajorHistoryCollectionViewCell.self, forCellWithReuseIdentifier: MajorHistoryCollectionViewCell.reuseidentifier)
         collectionView.backgroundColor = UIColor(named: "Learn")
         
         configureDataSource()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.tintColor = UIColor(named: "Learn Tab Bar Tint")
+        tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "Action")
     }
     
     func createLayout() -> UICollectionViewLayout {
