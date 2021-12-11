@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum ContactType: String {
+enum ContactType: String, CaseIterable {
     case call = "Call"
     case email = "Email"
     case text = "Text"

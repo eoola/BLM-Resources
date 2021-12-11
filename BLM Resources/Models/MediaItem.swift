@@ -34,15 +34,15 @@ enum MediaItem: Hashable {
         .media(Media(genre: "Great", image: UIImage(named: "Movie") ?? UIImage()))
     ]
     
-    static let movies: [Media] = [
+    static let movies: [MediaItem] = [
     
     ]
     
-    static let shows: [Media] = [
+    static let shows: [MediaItem] = [
         
     ]
     
-    static let categories: [Media] = [
+    static let categories: [MediaItem] = [
         
     ]
 }

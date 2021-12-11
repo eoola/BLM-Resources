@@ -38,6 +38,8 @@ class ActionCollectionViewController: UICollectionViewController {
             actionType = .petition
         }
         
+        tabBarController?.tabBar.backgroundColor = UIColor(named: "Action")
+        
         tabBarController?.tabBar.tintColor = UIColor(named: "Action Tab Bar Tint")
         tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "Learn")
     }

@@ -38,6 +38,7 @@ class MediaViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        tabBarController?.tabBar.backgroundColor = UIColor(named: "Learn")
         tabBarController?.tabBar.tintColor = UIColor(named: "Learn Tab Bar Tint")
         tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "Action")
     }
@@ -59,7 +60,7 @@ class MediaViewController: UIViewController {
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4)
                 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.45), heightDimension: .estimated(150))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.45), heightDimension: .estimated(100))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
                 
                 let section = NSCollectionLayoutSection(group: group)

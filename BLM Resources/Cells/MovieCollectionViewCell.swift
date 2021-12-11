@@ -21,9 +21,12 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }()
     
     let genreLabel: UILabel = {
+        
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: UIFont.smallSystemFontSize)
         label.textColor = UIColor(named: "Learn Text")
+        label.heightAnchor.constraint(equalToConstant: 15).isActive = true
+        
         label.setContentHuggingPriority(.required, for: .vertical)
         
         return label
@@ -31,6 +34,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     let imageView: UIImageView = {
         let imageView = UIImageView()
+        
         imageView.layer.cornerRadius = 5.0
         imageView.clipsToBounds = true
         
@@ -43,14 +47,18 @@ class MovieCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         stackview.addArrangedSubview(imageView)
-        stackview.setCustomSpacing(5, after: imageView)
         stackview.addArrangedSubview(genreLabel)
+        stackview.setCustomSpacing(10, after: imageView)
         addSubview(stackview)
+        //addSubview(imageView)
+        //addSubview(genreLabel)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        genreLabel.translatesAutoresizingMaskIntoConstraints = false
         stackview.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             stackview.topAnchor.constraint(equalTo: topAnchor),
-            stackview.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackview.bottomAnchor.constraint(equalTo: bottomAnchor),
+            stackview.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackview.leadingAnchor.constraint(equalTo: leadingAnchor)
         ])
     }
@@ -60,7 +68,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(_ media: Media) {
-        genreLabel.text = media.genre
         imageView.image = media.image
+        genreLabel.text = media.genre
     }
 }

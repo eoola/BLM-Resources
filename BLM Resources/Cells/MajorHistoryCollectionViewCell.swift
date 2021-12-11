@@ -32,6 +32,7 @@ class MajorHistoryCollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 5.0
+        
         imageView.clipsToBounds = true
         
         imageView.contentMode = .scaleAspectFill

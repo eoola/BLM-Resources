@@ -18,28 +18,85 @@ class ContactTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.backgroundColor = UIColor(named: "Action")
+        
+        tabBarController?.tabBar.tintColor = UIColor(named: "Action Tab Bar Tint")
+        tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "Learn")
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return ContactType.allCases.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        switch section {
+        case 0:
+            return Contact.callContacts.count
+        case 1:
+            return Contact.emailContacts.count
+        case 2:
+            return Contact.textContacts.count
+        default:
+            return 0
+        }
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
+        
+        let contactType = ContactType.allCases[indexPath.section]
+        var contact: Contact
+        switch contactType {
+        case .text:
+            contact = Contact.textContacts[indexPath.row]
+        case .call:
+            contact = Contact.callContacts[indexPath.row]
+        case .email:
+            contact = Contact.emailContacts[indexPath.row]
+        }
 
         // Configure the cell...
+        var content = cell.defaultContentConfiguration()
+        
+        content.text = contact.title
+        content.image = contact.image
+        content.imageProperties.tintColor = UIColor(named: "Learn Text")
+        
+        cell.contentConfiguration = content
 
         return cell
     }
-    */
+    
+    /*
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        ContactType.allCases[section].rawValue
+    }
+     */
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionHeaderLabelView = UIView()
+        
+        let sectionHeaderLabel = UILabel()
+        sectionHeaderLabel.text = ContactType.allCases[section].rawValue
+        sectionHeaderLabel.textColor = UIColor(named: "Action Text")
+        sectionHeaderLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        sectionHeaderLabel.frame = CGRect(x: 0, y: 0, width: 250, height: 20)
+        
+        sectionHeaderLabelView.addSubview(sectionHeaderLabel)
+        
+        return sectionHeaderLabelView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
 
     /*
     // Override to support conditional editing of the table view.

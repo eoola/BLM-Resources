@@ -12,6 +12,10 @@
 		7B1FAA152759A8C700EAA1B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1FAA132759A8C700EAA1B1 /* Main.storyboard */; };
 		7B1FAA172759A8C800EAA1B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B1FAA162759A8C800EAA1B1 /* Assets.xcassets */; };
 		7B1FAA1A2759A8C800EAA1B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1FAA182759A8C800EAA1B1 /* LaunchScreen.storyboard */; };
+		7B27D6572763A2EC00214F08 /* HistoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27D6562763A2EC00214F08 /* HistoryCollectionViewController.swift */; };
+		7B27D6592763A7AF00214F08 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27D6582763A7AF00214F08 /* ArticleViewController.swift */; };
+		7B27D65B2763D18300214F08 /* OtherHistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27D65A2763D18300214F08 /* OtherHistoryCollectionViewCell.swift */; };
+		7B27D65D276474BA00214F08 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27D65C276474BA00214F08 /* ArticleDetailViewController.swift */; };
 		7B2A3017276135C800DD6393 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A3016276135C800DD6393 /* Petition.swift */; };
 		7B2A30192761368100DD6393 /* ActionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A30182761368100DD6393 /* ActionItem.swift */; };
 		7B2A301B2761AFDF00DD6393 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A301A2761AFDF00DD6393 /* ContactTableViewController.swift */; };
@@ -19,7 +23,6 @@
 		7BC5E185275B2DD500D650B9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5E184275B2DD500D650B9 /* InitialViewController.swift */; };
 		7BC5E199275C0CA000D650B9 /* MajorHistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5E198275C0CA000D650B9 /* MajorHistoryCollectionViewCell.swift */; };
 		7BC5E19B275C0F6500D650B9 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5E19A275C0F6500D650B9 /* Article.swift */; };
-		7BC5E19D275C15A100D650B9 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5E19C275C15A100D650B9 /* HistoryViewController.swift */; };
 		7BD863FC275D625000237869 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD863FB275D624F00237869 /* MovieCollectionViewCell.swift */; };
 		7BD863FF275D66F300237869 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD863FE275D66F300237869 /* Media.swift */; };
 		7BD86401275D68E600237869 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD86400275D68E600237869 /* MediaViewController.swift */; };
@@ -38,6 +41,10 @@
 		7B1FAA162759A8C800EAA1B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B1FAA192759A8C800EAA1B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B1FAA1B2759A8C800EAA1B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B27D6562763A2EC00214F08 /* HistoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewController.swift; sourceTree = "<group>"; };
+		7B27D6582763A7AF00214F08 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		7B27D65A2763D18300214F08 /* OtherHistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherHistoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7B27D65C276474BA00214F08 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		7B2A3016276135C800DD6393 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		7B2A30182761368100DD6393 /* ActionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionItem.swift; sourceTree = "<group>"; };
 		7B2A301A2761AFDF00DD6393 /* ContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +52,6 @@
 		7BC5E184275B2DD500D650B9 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		7BC5E198275C0CA000D650B9 /* MajorHistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorHistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BC5E19A275C0F6500D650B9 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		7BC5E19C275C15A100D650B9 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		7BD863FB275D624F00237869 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BD863FE275D66F300237869 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		7BD86400275D68E600237869 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
@@ -103,11 +109,13 @@
 		7BC5E186275B2F6C00D650B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7BC5E19C275C15A100D650B9 /* HistoryViewController.swift */,
 				7BC5E184275B2DD500D650B9 /* InitialViewController.swift */,
 				7BD86400275D68E600237869 /* MediaViewController.swift */,
 				7BD86408275D7FE500237869 /* ActionCollectionViewController.swift */,
 				7B2A301A2761AFDF00DD6393 /* ContactTableViewController.swift */,
+				7B27D6562763A2EC00214F08 /* HistoryCollectionViewController.swift */,
+				7B27D6582763A7AF00214F08 /* ArticleViewController.swift */,
+				7B27D65C276474BA00214F08 /* ArticleDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 				7BC5E198275C0CA000D650B9 /* MajorHistoryCollectionViewCell.swift */,
 				7BD863FB275D624F00237869 /* MovieCollectionViewCell.swift */,
 				7BD86406275D79AA00237869 /* ActionCollectionViewCell.swift */,
+				7B27D65A2763D18300214F08 /* OtherHistoryCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -223,14 +232,17 @@
 				7BD86407275D79AA00237869 /* ActionCollectionViewCell.swift in Sources */,
 				7BC5E199275C0CA000D650B9 /* MajorHistoryCollectionViewCell.swift in Sources */,
 				7B2A3017276135C800DD6393 /* Petition.swift in Sources */,
-				7BC5E19D275C15A100D650B9 /* HistoryViewController.swift in Sources */,
 				7BD863FC275D625000237869 /* MovieCollectionViewCell.swift in Sources */,
 				7B2A30192761368100DD6393 /* ActionItem.swift in Sources */,
 				7BD8640B275D802800237869 /* Donation.swift in Sources */,
 				7BD86403275D69B100237869 /* MediaItem.swift in Sources */,
 				7B1FAA0E2759A8C700EAA1B1 /* AppDelegate.swift in Sources */,
 				7BD863FF275D66F300237869 /* Media.swift in Sources */,
+				7B27D65B2763D18300214F08 /* OtherHistoryCollectionViewCell.swift in Sources */,
+				7B27D6572763A2EC00214F08 /* HistoryCollectionViewController.swift in Sources */,
 				7BD86401275D68E600237869 /* MediaViewController.swift in Sources */,
+				7B27D65D276474BA00214F08 /* ArticleDetailViewController.swift in Sources */,
+				7B27D6592763A7AF00214F08 /* ArticleViewController.swift in Sources */,
 				7BD86409275D7FE500237869 /* ActionCollectionViewController.swift in Sources */,
 				7B1FAA102759A8C700EAA1B1 /* SceneDelegate.swift in Sources */,
 			);
